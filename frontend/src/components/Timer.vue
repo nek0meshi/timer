@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Timer</h1>
-    <p>{{ viewTimerTime }}</p>
+    <p class="time">{{ viewTimerTime }}</p>
     <button @click="start" :disabled="isRunning">Start</button>
     <button @click="stop" :disabled="!isRunning">Stop</button>
   </div>
@@ -44,3 +44,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.time {
+  font-size: 60px;
+}
+</style>
