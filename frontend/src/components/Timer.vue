@@ -25,6 +25,22 @@ export default defineComponent({
     return {
       ...timer,
     }
-  }
+  },
+  created() {
+    // キーコードによる動作の登録
+    window.addEventListener("keydown", this.keyAction);
+  },
+  methods: {
+    keyAction(e) {
+      switch (e.keyCode) {
+        case 32: // スペース
+          if (this.isRunning) {
+            this.stop()
+          } else {
+            this.start()
+          }
+      }
+    },
+  },
 })
 </script>

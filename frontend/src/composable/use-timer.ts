@@ -8,7 +8,7 @@ export default function useTimer() {
   const timerTime = ref(0)
 
   // computed
-  const viewTimerTime = computed(() => (timerTime.value / 1000).toFixed(1))
+  const viewTimerTime = computed(() => (timerTime.value / 1000).toFixed(2))
   const isRunning = computed(() => !!intervalId.value)
 
   // methods
